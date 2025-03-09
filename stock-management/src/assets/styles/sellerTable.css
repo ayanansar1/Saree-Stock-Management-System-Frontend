@@ -1,0 +1,128 @@
+/* User Table Container */
+.seller-table-container {
+    width: 100%;
+    overflow-x: auto;  /* Enables horizontal scrolling */
+    padding: 10px;
+    position: relative;
+}
+
+/* Table Styles */
+.seller-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;  /* Ensures the table does not shrink too much */
+}
+
+/* Table Headers */
+.seller-table thead {
+    background-color: #007bff;
+    color: white;
+    position: sticky;
+    top: 0;  /* Keeps the header fixed at the top */
+    z-index: 2;
+}
+
+.seller-table th {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* Table Rows */
+.seller-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+/* Alternate Row Colors */
+.seller-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover Effect */
+.seller-table tbody tr:hover {
+    background-color: #ddd;
+}
+
+/* Responsive: Enable Side Scrolling on Small Screens */
+@media screen and (max-width: 768px) {
+    .seller-table-container {
+        overflow-x: auto;  /* Enables side scroll */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+    }
+
+    .seller-table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap; /* Prevents text from wrapping */
+    }
+
+    .seller-table thead {
+        display: table-header-group; /* Keeps headers visible */
+    }
+
+    .seller-table tbody {
+        display: table-row-group;
+    }
+}
+/* Ensure Action Column Doesn't Wrap */
+.seller-table td:last-child {
+    width: 120px; /* Adjust width to fit buttons properly */
+    min-width: 120px;
+    text-align: center;
+}
+
+/* Action Buttons Container */
+.action-buttons {
+    display: flex;
+    justify-content: center; /* Center buttons */
+    align-items: center;
+    gap: 5px; /* Space between buttons */
+    flex-wrap: nowrap; /* Prevents wrapping */
+}
+
+/* Mini Buttons */
+.edit-btn, .delete-btn {
+    padding: 2px 6px; /* Make buttons smaller */
+    font-size: 10px; /* Reduce font size */
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    width: 55px; /* Set fixed width */
+    height: 22px; /* Reduce height */
+    border-radius: 3px;
+}
+
+/* Button Colors */
+.edit-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Mobile View Fix */
+@media screen and (max-width: 768px) {
+    .seller-table td:last-child {
+        width: 100px; /* Adjust for mobile */
+        min-width: 100px;
+    }
+
+    .action-buttons {
+        flex-direction: row; /* Ensure buttons stay in one row */
+        flex-wrap: nowrap;
+    }
+
+    .edit-btn, .delete-btn {
+        width: 45px; /* Reduce width for smaller screens */
+        font-size: 9px; /* Adjust font */
+        padding: 2px 4px;
+    }
+}

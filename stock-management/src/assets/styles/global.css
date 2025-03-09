@@ -1,0 +1,22 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .app-content {
+    display: flex;
+    flex: 1;
+  }
+  
+  main {
+    flex: 1;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
